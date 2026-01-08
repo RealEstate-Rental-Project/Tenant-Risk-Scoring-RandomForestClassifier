@@ -29,6 +29,14 @@ def predict_risk_score(data: TenantScoreRequest):
     if not model:
         raise HTTPException(status_code=503, detail="AI Model is not loaded.")
 
+    # Automatic approval for perfect tenant data
+    if data.missedPeriods == 0 and data.totalDisputes == 0:
+        return {
+            "trust_score": 100,
+            "risk_category": "Safe",
+            "recommendation": "Approve"
+        }
+
     try:
         # 1. Prepare Data for Model
         # The column names MUST match the training data exactly.
