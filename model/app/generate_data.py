@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Configuration
-OUTPUT_FILE = "tenant_data.csv"
+OUTPUT_FILE = "../data/tenant_data.csv"
 NUM_SAMPLES = 10000
 
 def generate_synthetic_data(n_samples=10000):

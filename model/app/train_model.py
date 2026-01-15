@@ -6,8 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
 
 # Configuration
-INPUT_FILE = "tenant_data.csv"
-MODEL_DIR = "model_artifacts"
+INPUT_FILE = "../data/tenant_data.csv"
+MODEL_DIR = "../models"
 MODEL_PATH = os.path.join(MODEL_DIR, "tenant_risk_model.pkl")
 
 def train():

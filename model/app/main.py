@@ -2,11 +2,11 @@ from fastapi import FastAPI, HTTPException
 import joblib
 import pandas as pd
 import os
-from src.schemas import TenantScoreRequest
+from schemas import TenantScoreRequest
 
 # --- CONFIGURATION ---
 app = FastAPI(title="Tenant Risk Scoring AI")
-MODEL_PATH = "model_artifacts/tenant_risk_model.pkl"
+MODEL_PATH = "../models/tenant_risk_model.pkl"
 model = None
 
 # --- STARTUP: Load the Model ---
