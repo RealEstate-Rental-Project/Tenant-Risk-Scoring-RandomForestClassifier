@@ -17,8 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # AJOUT CRUCIAL : Indique à Python où trouver vos modules
-ENV PYTHONPATH="${PYTHONPATH}:/app/model/app"
-
+ENV PYTHONPATH="/app/model/app"
 # Le port d'écoute configuré dans votre application
 EXPOSE 8000
 
